@@ -1,5 +1,6 @@
 name: second workflow demo
-on: push
+# on: push
+on: [push, workflow_dispatch]
 jobs:
   test_web_app:
     runs-on: ubuntu-latest
