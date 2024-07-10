@@ -1,5 +1,8 @@
 name: third workflow demo
-on: [push, workflow_dispatch]
+on: 
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:
 jobs:
   gather-info:
     runs-on: ubuntu-latest
