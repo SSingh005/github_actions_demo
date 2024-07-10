@@ -10,7 +10,7 @@ jobs:
         run:
           pwd
           ls -lart
-#Below code is docker and nginx stuff
+#Below code is docker and nginx image
       - name: Deploy a container for testing
         run: |
           docker image pull nginx
