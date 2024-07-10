@@ -1,5 +1,5 @@
 name: third workflow demo
-on: [push, worklow_dispatch]
+on: [push, workflow_dispatch]
 jobs:
   gather-info:
     runs-on: ubuntu-latest
