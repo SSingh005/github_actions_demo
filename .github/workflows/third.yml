@@ -2,11 +2,11 @@ name: third workflow demo
 on: 
   pull_request:
     types: [opened, synchronize]
-  workflow_dispatch:
-    push:
+  push:
     branches:
       - main
       - demo_branch
+      - 'dev_*'
 jobs:
   gather-info:
     runs-on: ubuntu-latest
