@@ -12,15 +12,18 @@ jobs:
           pwd
           ls -lart
 #Below code is docker and nginx image
-      - name: Deploy a container for testing
-        run: |
-          docker image pull nginx
-          docker image ls
-          docker container run -d -p 8080:80 nginx
-      - name: Test Web Deployment
-        run: |
-          python3 -c "import requests; r=requests.get('http://localhost:8080'); print(r.status_code)"
-          curl -s localhost:8080
+  deploy_nginx:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Deploy a container for testing
+          run: |
+            docker image pull nginx
+            docker image ls
+            docker container run -d -p 8080:80 nginx
+        - name: Test Web Deployment
+          run: |
+            python3 -c "import requests; r=requests.get('http://localhost:8080'); print(r.status_code)"
+            curl -s localhost:8080
 
   deploy_web_app:
     needs: [test_web_app]
