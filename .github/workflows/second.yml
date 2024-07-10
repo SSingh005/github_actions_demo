@@ -22,6 +22,7 @@ jobs:
           curl -s localhost:8080
 
   deploy_web_app:
+    needs: [test_web_app]
     runs-on: ubuntu-latest
     steps:
         - name: Deploy a Container to a Cloud Provider
