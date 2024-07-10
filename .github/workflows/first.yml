@@ -1,0 +1,12 @@
+#First Github Actions yml file
+name: first workflow demo
+on: workflow_dispatch    #what event the actions will trigger
+jobs:
+  first_workflow_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello Jack
+        run: echo "Hello Jack"
+      - name: bit o' wisdom
+        run: echo "it's over, I have the high ground"
+  
