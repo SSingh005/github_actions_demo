@@ -9,6 +9,7 @@ jobs:
         run: |
           touch "my_artifact_file"
           echo "This will be uploaded" > my_artifact_file
+          pwd
       - name: Upload an Artifact
         uses: actions/upload-artifact@v4
         with:
