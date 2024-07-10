@@ -9,4 +9,9 @@ jobs:
         run: echo "Hello Jack"
       - name: bit o' wisdom
         run: echo "it's over, I have the high ground"
+      - name: combo Jack
+        run:  |
+          echo "Hello there Jack"
+          echo "it's over, I have the high ground"
+  
   
