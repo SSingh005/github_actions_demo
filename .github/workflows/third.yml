@@ -7,6 +7,9 @@ on:
       - main
       - demo_branch
       - 'dev_*'
+    paths-ignore:
+      - 'README.md'
+      - '.github/workflows/*'
 jobs:
   gather-info:
     runs-on: ubuntu-latest
